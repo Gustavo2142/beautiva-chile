@@ -24,6 +24,30 @@ export async function generateMetadata({
   return {
     title: `${article.title} | Beautiva Chile`,
     description: article.excerpt,
+    alternates: {
+      canonical: `/blog/${article.slug}`,
+    },
+    openGraph: {
+      title: `${article.title} | Beautiva Chile`,
+      description: article.excerpt,
+      url: `/blog/${article.slug}`,
+      type: "article",
+      locale: "es_CL",
+      images: [
+        {
+          url: article.image,
+          width: 1200,
+          height: 800,
+          alt: article.title,
+        },
+      ],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: `${article.title} | Beautiva Chile`,
+      description: article.excerpt,
+      images: [article.image],
+    },
   };
 }
 

@@ -8,6 +8,25 @@ export const metadata: Metadata = {
   title: "Blog y Guías Clínicas | Beautiva Chile",
   description:
     "Artículos sobre medicina estética, cuidados de la piel, toxina botulínica, ácido hialurónico y cirugía plástica en Chile.",
+  alternates: {
+    canonical: "/blog",
+  },
+  openGraph: {
+    title: "Blog y Guías Clínicas | Beautiva Chile",
+    description:
+      "Información médica clara sobre tratamientos estéticos, cuidados faciales y cirugía plástica en Santiago.",
+    url: "/blog",
+    type: "website",
+    locale: "es_CL",
+    images: [
+      {
+        url: "/images/blog-1.jpg",
+        width: 1200,
+        height: 800,
+        alt: "Blog Clínico Beautiva Chile",
+      },
+    ],
+  },
 };
 
 export default function BlogPage() {
