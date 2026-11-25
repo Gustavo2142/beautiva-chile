@@ -1,0 +1,120 @@
+@import "tailwindcss";
+
+:root {
+  --accent: #00a1bf;
+  --accent-hover: #007186;
+  --heading: #4a4a4b;
+  --body: #636363;
+  --grey-1: #f5f5f5;
+  --grey-3: #dedede;
+  --white: #ffffff;
+  --black: #000000;
+  --ease-out: cubic-bezier(0.23, 1, 0.32, 1);
+  --ease-in-out: cubic-bezier(0.77, 0, 0.175, 1);
+}
+
+@theme inline {
+  --color-accent: var(--accent);
+  --color-accent-hover: var(--accent-hover);
+  --color-heading: var(--heading);
+  --color-body: var(--body);
+  --color-grey-1: var(--grey-1);
+  --color-grey-3: var(--grey-3);
+  --font-serif: var(--font-playfair), Georgia, serif;
+  --font-sans: var(--font-lato), system-ui, -apple-system, sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 152px;
+}
+
+body {
+  background-color: var(--grey-1);
+  color: var(--body);
+  font-family: var(--font-sans);
+  overflow-x: clip;
+}
+
+::selection {
+  background-color: var(--accent);
+  color: var(--white);
+}
+
+:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+}
+
+.font-display {
+  font-family: var(--font-serif);
+}
+
+.btn-press {
+  transition: transform 160ms var(--ease-out), background-color 200ms var(--ease-out), color 200ms var(--ease-out), border-color 200ms var(--ease-out), box-shadow 200ms var(--ease-out);
+}
+
+.btn-press:active {
+  transform: scale(0.97);
+}
+
+@keyframes marquee-left {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-marquee {
+  display: flex;
+  width: max-content;
+  animation: marquee-left 36s linear infinite;
+}
+
+.animate-marquee-slow {
+  display: flex;
+  width: max-content;
+  animation: marquee-left 48s linear infinite;
+}
+
+.marquee-wrapper:hover .animate-marquee,
+.marquee-wrapper:hover .animate-marquee-slow,
+.marquee-paused .animate-marquee,
+.marquee-paused .animate-marquee-slow {
+  animation-play-state: paused;
+}
+
+@keyframes scroll-wheel {
+  0% {
+    transform: translateY(0);
+    opacity: 0.9;
+  }
+  65% {
+    transform: translateY(10px);
+    opacity: 0.2;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 0.9;
+  }
+}
+
+.animate-scroll-wheel {
+  animation: scroll-wheel 2s var(--ease-in-out) infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  .animate-marquee,
+  .animate-marquee-slow,
+  .animate-scroll-wheel {
+    animation: none;
+  }
+  .btn-press {
+    transition: none;
+  }
+}
