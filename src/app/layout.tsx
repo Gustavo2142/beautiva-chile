@@ -1,6 +1,6 @@
 import type { Metadata, Viewport } from "next";
 import { Lato, Playfair_Display } from "next/font/google";
-import { BRANCH_LOCATIONS, FAQ_ITEMS } from "@/data/clinic-data";
+import { BRANCH_LOCATIONS, FAQ_ITEMS, SERVICES_DATA } from "@/data/clinic-data";
 import "./globals.css";
 
 const playfair = Playfair_Display({
@@ -87,6 +87,25 @@ const clinicSchema = {
         "@type": "City",
         name: "Santiago",
         addressCountry: "CL",
+      },
+      hasOfferCatalog: {
+        "@type": "OfferCatalog",
+        name: "Catálogo Oficial de Tratamientos Médicos y Aranceles CLP",
+        itemListElement: SERVICES_DATA.flatMap((cat) =>
+          cat.treatments.map((t) => ({
+            "@type": "Offer",
+            itemOffered: {
+              "@type": "MedicalProcedure",
+              name: t.name,
+              description: t.summary,
+              bodyLocation: cat.title,
+            },
+            price: t.priceClp,
+            priceCurrency: "CLP",
+            availability: "https://schema.org/InStock",
+            validFrom: "2026-01-01",
+          }))
+        ),
       },
       department: BRANCH_LOCATIONS.map((branch) => ({
         "@type": "MedicalClinic",

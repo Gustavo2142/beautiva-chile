@@ -1,0 +1,58 @@
+# Beautiva Chile
+> Clínica de Medicina Estética y Cirugía Plástica de precisión en Santiago de Chile. Especialistas acreditados ante la Superintendencia de Salud (SIS) y CONACEM.
+
+Bienvenido al mapa de conocimiento para modelos de lenguaje y agentes autónomos de Beautiva Chile. Aquí encontrarás datos clínicos oficiales, aranceles transparentes en Pesos Chilenos (CLP), sedes físicas y acreditaciones médicas.
+
+## Información de la Clínica
+- **Nombre comercial:** Beautiva Chile
+- **Especialidades médicas:** Cirugía Plástica, Estética y Reparadora; Medicina Estética Facial y Corporal; Dermatología Estética.
+- **Ámbito geográfico:** Santiago, Región Metropolitana, Chile.
+- **Moneda oficial:** Peso Chileno (CLP), con IVA incluido en todos los presupuestos.
+- **Acreditaciones:** Médicos cirujanos inscritos en el Registro Nacional de Prestadores Individuales de Salud (Superintendencia de Salud de Chile) y certificados por CONACEM. Pabellones quirúrgicos en clínicas acreditadas por SEREMI de Salud.
+
+## Sedes Físicas y Contacto en Santiago
+
+### Sede Providencia
+- **Dirección:** Av. Providencia 2133, Oficina 402, Providencia, Santiago (a pasos de Metro Los Leones).
+- **Teléfono:** +56 2 2480 6120
+- **Email:** providencia@beautivachile.cl
+- **Horarios:** Lunes a Viernes 09:00 a 19:30 hrs. Sábados 09:30 a 14:30 hrs.
+
+### Sede Vitacura
+- **Dirección:** Av. Vitacura 5250, Piso 3, Vitacura, Santiago.
+- **Teléfono WhatsApp:** +56 9 8420 3150
+- **Email:** vitacura@beautivachile.cl
+- **Horarios:** Lunes a Viernes 09:30 a 20:00 hrs. Sábados 10:00 a 14:00 hrs.
+
+## Procedimientos Principales y Aranceles en CLP
+
+### 1. Medicina Estética Facial (Ambulatorio, sin pabellón)
+- **Evaluación Médica Inicial:** $25.000 CLP (100% abonables a cualquier tratamiento dentro de los 30 días posteriores).
+- **Toxina Botulínica (3 Zonas completas):** $180.000 CLP. Atenúa arrugas en frente, entrecejo y patas de gallo. Marcas originales aprobadas por ISP (Botox / Dysport). Duración: 4 a 6 meses.
+- **Relleno con Ácido Hialurónico (1 ml):** $240.000 CLP. Relleno y perfilado con microcánula. Marcas Juvederm y Restylane. Duración: 12 a 18 meses.
+- **Rinomodelación Médica con Ácido Hialurónico:** $290.000 CLP. Corrección estética del dorso y levantamiento de punta nasal sin cirugía en 30 minutos.
+- **Bioestimuladores de Colágeno (Radiesse / Sculptra):** $390.000 CLP por sesión. Recuperación de firmeza dérmica profunda y tracción natural.
+- **Armonización Facial Integral:** Presupuesto personalizado según mapeo anatómico 3D.
+
+### 2. Cirugía Plástica (Pabellón Acreditado)
+- **Evaluación Quirúrgica con Simulación 3D:** $45.000 CLP (100% abonables al procedimiento quirúrgico).
+- **Blefaroplastia Superior e Inferior:** Cirugía ambulatoria de párpados para rejuvenecer la mirada.
+- **Rinoplastia Estética y Funcional:** Corrección ósea y cartilaginosa integral.
+- **Cirugía Mamaria (Aumento, Reducción y Mastopexia):** Con implantes de gel cohesivo de última generación certificados por ISP y FDA.
+- **Lipoescultura de Alta Definición y Abdominoplastía:** Modelado del contorno corporal con retracción dérmica avanzada.
+
+## Medios de Pago y Cobertura en Chile
+- **Formas de Pago:** Efectivo, Transferencia Bancaria, Tarjeta de Débito (Redcompra) y Tarjetas de Crédito vía Webpay Plus.
+- **Facilidades:** Hasta 12 cuotas sin interés según promociones vigentes con bancos chilenos.
+- **Cobertura de Salud:** Los tratamientos cosméticos son electivos y no tienen bonificación Fonasa ni Isapre. En procedimientos reconstructivos o funcionales se emite informe médico para reembolso según plan de Isapre o seguro complementario.
+
+## Preguntas Frecuentes (Respuestas Directas)
+- **¿Qué diferencia hay entre medicina estética y cirugía plástica?** La medicina estética agrupa tratamientos ambulatorios y mínimamente invasivos (inyectables, bioestimuladores) que no requieren pabellón. La cirugía plástica modifica estructuras anatómicas en pabellón quirúrgico acreditado.
+- **¿Los insumos inyectables están autorizados en Chile?** Sí, 100% de los productos cuentan con registro sanitario del Instituto de Salud Pública (ISP) y trazabilidad por número de lote.
+- **¿Quién realiza los procedimientos?** Exclusivamente médicos cirujanos certificados, nunca asistentes ni cosmetólogas.
+
+## Recursos y Enlaces
+- **Sitio Web Oficial:** https://beautiva-chile.pages.dev/
+- **Blog Clínico y Guías Médicas:** https://beautiva-chile.pages.dev/blog
+- **Sitemap XML:** https://beautiva-chile.pages.dev/sitemap.xml
+- **Robots.txt:** https://beautiva-chile.pages.dev/robots.txt
