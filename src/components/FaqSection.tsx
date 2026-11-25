@@ -10,7 +10,7 @@ export function FaqSection() {
   const [openIndex, setOpenIndex] = useState<number | null>(0);
 
   return (
-    <section id="faq" className="w-full py-20">
+    <section id="faq" className="section-defer w-full py-20">
       <div className="mx-auto grid max-w-[1220px] grid-cols-1 items-start gap-12 px-5 lg:grid-cols-12">
         {/* Left portrait photo matching Framer FAQ */}
         <div className="relative aspect-[4/5] w-full overflow-hidden rounded-[20px] bg-[#DEDEDE] lg:col-span-5">

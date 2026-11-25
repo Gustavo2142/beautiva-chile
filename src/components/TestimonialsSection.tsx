@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import Image from "next/image";
 import { Pause, Play, Star } from "lucide-react";
 import { TESTIMONIALS } from "@/data/clinic-data";
@@ -8,10 +8,27 @@ import { SectionHeading } from "./SectionHeading";
 
 export function TestimonialsSection() {
   const [paused, setPaused] = useState(false);
+  const [inView, setInView] = useState(false);
+  const sectionRef = useRef<HTMLElement | null>(null);
   const repeated = [...TESTIMONIALS, ...TESTIMONIALS];
 
+  useEffect(() => {
+    const el = sectionRef.current;
+    if (!el) return;
+    const observer = new IntersectionObserver(
+      ([entry]) => setInView(entry.isIntersecting),
+      { rootMargin: "160px" }
+    );
+    observer.observe(el);
+    return () => observer.disconnect();
+  }, []);
+
   return (
-    <section id="testimonios" className="w-full py-20">
+    <section
+      ref={sectionRef}
+      id="testimonios"
+      className="section-contain w-full py-20"
+    >
       <div className="mx-auto flex max-w-[1220px] flex-col gap-6 px-5 pb-12 sm:flex-row sm:items-end sm:justify-between">
         <SectionHeading
           badge="Testimonios"
@@ -41,7 +58,7 @@ export function TestimonialsSection() {
 
       <div
         className={`marquee-wrapper overflow-hidden ${
-          paused ? "marquee-paused" : ""
+          paused || !inView ? "marquee-paused" : ""
         }`}
       >
         <div className="animate-marquee-slow gap-5 px-3">
@@ -61,6 +78,7 @@ export function TestimonialsSection() {
                     alt={item.author}
                     width={56}
                     height={56}
+                    decoding="async"
                     className="h-full w-full object-cover"
                   />
                 </div>

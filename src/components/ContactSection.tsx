@@ -63,7 +63,7 @@ export function ContactSection() {
     <section
       id="contacto"
       aria-label="Reserva de horas y sucursales"
-      className="grid w-full grid-cols-1 lg:grid-cols-2"
+      className="section-defer grid w-full grid-cols-1 lg:grid-cols-2"
     >
       {/* Left photo-backed booking form matching Beautiva Framer Contact */}
       <div className="relative flex flex-col justify-center overflow-hidden bg-black px-6 py-20 text-white sm:px-14 lg:px-20">

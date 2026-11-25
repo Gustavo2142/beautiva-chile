@@ -7,7 +7,7 @@ export function BlogSection() {
   const featured = BLOG_ARTICLES.slice(0, 3);
 
   return (
-    <section id="blog" className="w-full py-20">
+    <section id="blog" className="section-defer w-full py-20">
       <div className="mx-auto flex max-w-[1220px] flex-col items-center gap-12 px-5">
         <SectionHeading
           badge="Blog"

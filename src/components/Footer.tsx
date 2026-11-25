@@ -10,7 +10,7 @@ export function Footer() {
   const quickLinks = [{ label: "Inicio", href: "/" }, ...NAV_LINKS];
 
   return (
-    <footer className="w-full bg-black text-white">
+    <footer className="section-defer w-full bg-black text-white">
       <div className="mx-auto max-w-[1220px] px-5 pt-20 pb-10">
         {/* Top Footer CTA */}
         <div className="flex flex-col items-center gap-8 pb-16 text-center">

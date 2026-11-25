@@ -36,7 +36,7 @@ export function GallerySection() {
   return (
     <section
       id="galeria"
-      className="w-full bg-[#00A1BF] py-20 text-white"
+      className="section-contain w-full bg-[#00A1BF] py-20 text-white"
     >
       <div className="mx-auto flex max-w-[1220px] flex-col items-center gap-12 px-5">
         <SectionHeading
@@ -60,10 +60,11 @@ export function GallerySection() {
                 src={item.src}
                 alt={item.alt}
                 fill
-                sizes="(max-width: 768px) 100vw, 33vw"
-                className="object-cover object-center transition-transform duration-500 ease-out group-hover:scale-[1.03]"
+                decoding="async"
+                sizes="(max-width: 768px) 100vw, (max-width: 1220px) 33vw, 400px"
+                className="object-cover object-center transition-transform duration-300 ease-out group-hover:scale-[1.03]"
               />
-              <div className="absolute inset-0 bg-black/0 transition-colors duration-300 group-hover:bg-black/20" />
+              <div className="absolute inset-0 bg-black/0 transition-colors duration-200 group-hover:bg-black/20" />
             </button>
           ))}
         </div>
