@@ -1,22 +1,37 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import Image from "next/image";
 import { HERO_SLIDES } from "@/data/clinic-data";
 import { CtaButton } from "./CtaButton";
 
 export function HeroSection() {
   const [activeIndex, setActiveIndex] = useState(0);
+  const [isVisible, setIsVisible] = useState(true);
+  const sectionRef = useRef<HTMLElement | null>(null);
 
   useEffect(() => {
+    const el = sectionRef.current;
+    if (!el) return;
+    const observer = new IntersectionObserver(
+      ([entry]) => setIsVisible(entry.isIntersecting),
+      { threshold: 0.05 }
+    );
+    observer.observe(el);
+    return () => observer.disconnect();
+  }, []);
+
+  useEffect(() => {
+    if (!isVisible) return;
     const timer = window.setInterval(() => {
       setActiveIndex((prev) => (prev + 1) % HERO_SLIDES.length);
     }, 5500);
     return () => window.clearInterval(timer);
-  }, []);
+  }, [isVisible]);
 
   return (
     <section
+      ref={sectionRef}
       aria-label="Presentación principal"
       className="relative flex min-h-dvh w-full flex-col items-center justify-center overflow-hidden bg-black pt-40 pb-24 text-white"
     >
@@ -34,6 +49,7 @@ export function HeroSection() {
               alt={slide.alt}
               fill
               priority={idx === 0}
+              decoding={idx === 0 ? "sync" : "async"}
               sizes="100vw"
               className="object-cover object-center"
             />

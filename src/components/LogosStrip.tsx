@@ -1,10 +1,27 @@
+"use client";
+
+import { useEffect, useRef, useState } from "react";
 import { PARTNER_LOGOS } from "@/data/clinic-data";
 
 export function LogosStrip() {
+  const [inView, setInView] = useState(true);
+  const sectionRef = useRef<HTMLElement | null>(null);
   const repeated = [...PARTNER_LOGOS, ...PARTNER_LOGOS];
+
+  useEffect(() => {
+    const el = sectionRef.current;
+    if (!el) return;
+    const observer = new IntersectionObserver(
+      ([entry]) => setInView(entry.isIntersecting),
+      { rootMargin: "120px" }
+    );
+    observer.observe(el);
+    return () => observer.disconnect();
+  }, []);
 
   return (
     <section
+      ref={sectionRef}
       aria-label="Alianzas y respaldos médicos"
       className="w-full border-y border-[#DEDEDE]/80 bg-[#F5F5F5] py-7"
     >
@@ -12,7 +29,11 @@ export function LogosStrip() {
         <p className="text-[12px] font-bold uppercase tracking-[1.6px] text-[#636363]">
           Respaldo y Certificaciones
         </p>
-        <div className="marquee-wrapper relative overflow-hidden">
+        <div
+          className={`marquee-wrapper relative overflow-hidden ${
+            inView ? "" : "marquee-paused"
+          }`}
+        >
           <div
             aria-hidden="true"
             className="pointer-events-none absolute inset-y-0 left-0 z-10 w-12 bg-gradient-to-r from-[#F5F5F5] to-transparent"

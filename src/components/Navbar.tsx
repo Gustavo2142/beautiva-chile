@@ -41,7 +41,7 @@ export function Navbar({ overlayHero = false }: { overlayHero?: boolean }) {
 
         <nav
           aria-label="Navegación principal"
-          className={`flex items-center justify-between gap-4 bg-white/96 backdrop-blur-md px-5 sm:px-7 py-3.5 shadow-[0_10px_30px_rgba(0,0,0,0.08)] ${
+          className={`flex items-center justify-between gap-4 bg-white px-5 sm:px-7 py-3.5 shadow-[0_10px_30px_rgba(0,0,0,0.08)] ${
             promoVisible ? "rounded-b-[22px]" : "rounded-[22px]"
           }`}
         >
